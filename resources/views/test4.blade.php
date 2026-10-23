@@ -30,3 +30,4 @@
 
 <img style="width: 100px" src=" {{ asset('assets/images/orig.webp') }}" alt="#">
 <img style="width: 500px" src=" {{ asset('assets/images/cd2bf7ff0bb34e79cd294c41f6ce40b0.jpg') }}" alt="#">
+<img style="width: 200px" src=" {{ asset('assets/images/Q32pqHKuXWmJW_zweliWJbaoGgfGWQA2619P0McoXMM389f4Y14BKE5YbWYB7bxLL8ZKK5NR37QU97hSr1NsescC.jpg') }}" alt="#">

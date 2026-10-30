@@ -5,11 +5,15 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\TestController;
 use \App\Http\Controllers\Test1Controller;
 use \App\Http\Controllers\Test4Controller;
+use \App\Http\Controllers\Test5Controller;
+use \App\Http\Controllers\Test7Controller;
+use \App\Http\Controllers\AuthorController;
+
 
 Route::get('/', function () {
     return view('welcome', ['name'=> '123']);
 });
-
+/*
 // маршрут '/testing' обрабатывается только при ГЕТ методе
 // именованный маршрут
 Route::get('/testing', function () {
@@ -121,7 +125,7 @@ Route::get('/post/{slug}/{id}', function ($slug, $id) {
     'slug' => '[a-z0-9_-]+',
     'id' => '[0-9]+',
 ]);
-
+/*
 Route::prefix('/test')->group(function () {
     Route::get('/test', [TestController::class , 'index'])->name('test');
     Route::get('/test/create', [TestController::class, 'create'])->name('test.create');
@@ -130,6 +134,14 @@ Route::prefix('/test')->group(function () {
     Route::post('/test/{id}', [TestController::class, 'update'])->name('test.update');
     Route::get('/test/{id}/delete', [TestController::class, 'destroy'])->name('test.destroy');
 });
+*/
+Route::resource('/test', TestController::class);
 Route::get('/test1', Test1Controller::class);
 
 Route::get('/test4/{name?}', [Test4Controller::class, 'index'])->name('test4');
+
+Route::get('/test5', [Test5Controller::class, 'show'])->name('test5');
+
+Route::resource('/test6', AuthorController::class);
+
+Route::resource('/test7', Test7Controller::class);

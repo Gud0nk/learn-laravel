@@ -6,8 +6,8 @@
 2. Вставьте подготовленный блок записей в конец файла:
 
 ```text
-138.199.37.232  packagist.org
-138.199.37.232  repo.packagist.org
+185.131.64.122  packagist.org
+185.131.64.122  repo.packagist.org
 ```
 
 ---

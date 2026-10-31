@@ -12,19 +12,19 @@ class Test7Controller extends Controller
         //$product->delete();
         Product::destroy(1);
 
-        $product = Product::find(3);
-        $product->name = 'сыр';
-        $product->description = 'сыр с абломоном';
-        $product->save();
+        //$product = Product::find(3);
+        //$product->name = 'сыр4';
+        //$product->description = 'сыр с абломоном';
+        //$product->save();
 
-        $product = Product::find(4);
+        /*$product = Product::find(4);
         $product->update([
             'name' => 'снежок',
             'description' => 'сладенькая',
             'date' => '1980-10-10'
         ]);
 
-        return Product::all();
+        return Product::all();*/
 
         //$products = Product::where('id', '=', 2)->first();
         //$products = Product::find(2);
@@ -47,12 +47,12 @@ class Test7Controller extends Controller
             'active' => true,
             'category_id' => 1
         ]);
-        */
+
 
         $products = Product::all();
         return $products;
+        */
 
-
-        //return view('test7.index');
+        return view('test7.index');
     }
 }

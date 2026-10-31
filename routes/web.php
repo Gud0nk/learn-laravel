@@ -145,3 +145,4 @@ Route::get('/test5', [Test5Controller::class, 'show'])->name('test5');
 Route::resource('/test6', AuthorController::class);
 
 Route::resource('/test7', Test7Controller::class);
+

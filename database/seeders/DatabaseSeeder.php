@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -26,7 +28,9 @@ class DatabaseSeeder extends Seeder
             // Вызов всех остальных сидеров ( наполнитель )
         $this->call([
            UserSeeder::class,
-           CategorySeeder::class
+           CategorySeeder::class,
+            Test6Seeder::class,
+            PostSeeder::class,
         ]);
 
     }

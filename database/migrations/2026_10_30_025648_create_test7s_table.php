@@ -19,7 +19,7 @@ return new class extends Migration
             $table->decimal('price',18,2);
             $table->boolean('gender');
             $table->text('description');
-            $table->string('paragraph');
+            $table->text('paragraph');
             $table->string('email')->unique();
             $table->string('phone');
             $table->string('password');

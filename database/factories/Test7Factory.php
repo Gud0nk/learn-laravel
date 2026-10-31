@@ -24,19 +24,19 @@ class Test7Factory extends Factory
             'age'=> $this->faker->numberBetween(14,100),
             'gender'=> $this->faker->boolean(),
             'price'=> $this->faker->randomFloat(2,10,10000000),
-            'description'=> $this->faker->text(),
+            'description'=> $this->faker->realText(),
             'paragraph'=> $this->faker->paragraph(),
-            'email'=> $this->faker->email()->unique()->safeEmail(),
+            'email'=> $this->faker->unique()->email(),
             'phone'=> $this->faker->phoneNumber(),
             'password'=> $this->faker->password(),
             'address'=> $this->faker->address(),
             'url'=> $this->faker->url(),
             'mac'=> $this->faker->macAddress(),
             'ipv4'=> $this->faker->ipv4(),
-            'username'=> $this->faker->userName(),
+            'username'=> $this->faker->optional(0.8)->userName(),
             'useragent'=> $this->faker->userAgent(),
             'image'=> $this->faker->imageUrl(),
-            'extension'=> $this->faker->extension(),
+            'extension'=> $this->faker->fileExtension(),
         ];
     }
 }
